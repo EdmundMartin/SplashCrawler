@@ -13,7 +13,6 @@ class SplashScraper:
         self.pool = ThreadPoolExecutor(max_workers=20)
         self.scraped_pages = set([])
         self.to_crawl = Queue()
-        self.splash_server = ''
         self.to_crawl.put(self.base_url)
 
     def parse_links(self, html):
