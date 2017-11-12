@@ -31,7 +31,6 @@ class SplashScraper:
         products = soup.find_all('div', {'class': 'product-detail'})
         if products:
             for product in products:
-                print(product)
                 name = product.find('p', {'class':'margin-bottom-xxl'})
                 price = product.find('div', {'class': 'price'})
                 if name and price:
