@@ -6,7 +6,7 @@ from urllib.parse import urljoin, urlparse
 
 class SplashScraper:
 
-    def __init__(self, base_url, user_agent):
+    def __init__(self, base_url):
 
         self.base_url = base_url
         self.root_url = '{}://{}'.format(urlparse(self.base_url).scheme, urlparse(self.base_url).netloc)
@@ -66,5 +66,5 @@ class SplashScraper:
                 continue
 
 if __name__ == '__main__':
-    s = SplashScraper("http://www.boden.co.uk", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0")
+    s = SplashScraper("http://www.boden.co.uk")
     s.run_scraper()
